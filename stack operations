@@ -1,0 +1,56 @@
+#include<stdio.h>
+#define size 4
+int stack[size];
+int i=-1;
+push(int n)
+{
+	if(i<size-1){
+		i++;
+		stack[i]=n;
+		printf("\n inserted %d \n",n);
+	}
+	else{
+		printf("\n stack is full!");
+	}
+}
+Main(){
+	int opt;
+	while(i){
+		printf("\n: STACK OPERATIONS");
+		printf("\n 1.To Puh");
+		printf("\n 2.To Pop");
+		printf("\n 3.To peek");
+		printf("\n 4.To Traverse");
+		printf("\n 5.Exit");
+		printf("\n Enter Your Choice");
+		scanf("%d",&opt);
+		if(opt==1){
+			int n;
+			printf("enter ele:\n");
+			scanf("%d",&n);
+			push(n);
+		}
+		if(opt==5)
+		break;
+		}
+}
+pop()
+{
+	if(i<0){
+		printf("\n Stack is Empty");
+	}
+	else{
+		printf("\n Recent ele removed:%d",i);
+		i--;
+	}
+}
+peek(){
+	printf("\n Recent ele is:%d",stack[i]);
+}
+traverse(){
+	int j;
+	for(j=i;i>=0;;i--){
+		printf("%d\n",stack[i]);
+	}
+	}
+}
